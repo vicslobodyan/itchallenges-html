@@ -1,0 +1,48 @@
+.menu {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: initial;
+
+	&__hamburger {
+		display: block;
+	}
+	&__icon-open.fa {
+		font-size: 26px;	
+	}
+	&__list {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 240px;
+		background-color: @main-color;
+		transition: all 0.3s ease;
+
+		&.opened {
+			opacity: 1;
+			left: ~"calc(100% - 240px)";
+		}
+	}
+	&__link {
+		display: block;
+		padding: 10px 20px;
+		font: 1em/1.4 @main-font;
+		color: #1f1e1e;
+		text-decoration: none;
+		&:hover {
+			color: @accent-color;
+		}
+		&:active {
+			color: darken(@accent-color, 10%);
+		}
+	}
+	&__close {
+		float: right;
+	}
+	&__icon-close {
+		&.fa {
+			font-size: 22px;
+			color: #000;
+		}	
+	}
+}

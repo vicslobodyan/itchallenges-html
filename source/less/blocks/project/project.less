@@ -1,0 +1,137 @@
+.project {
+	position: relative;
+	width: 100%;
+    height: 100%;
+
+	&__img {
+		position: absolute; 
+		left: 0; 
+		right: 0;
+		margin: auto; 
+		min-width: 50%;
+		min-height: 50%;
+		overflow: hidden;
+	}
+
+	&__prev, &__next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0;
+		border: none;
+		font-size: 0;
+		background: #272727;
+		z-index: 2;
+	}
+
+	&__prev {
+		left: 0;
+		.fa {
+			padding-right: 10px;
+		}
+	}
+
+	&__next {
+		right: 0;
+		.fa {
+			padding-left: 10px;
+		}
+	}
+
+	&__center-block {
+		position: absolute;
+		top: 50%;
+   		left: 50%;
+    	transform: translate(-50%,-50%);
+		width: 37%;
+		text-align: center;
+		font-family: @secondary-font;
+		z-index: 2;
+		@media all and (max-width: 1356px) {
+			width: 50%;
+			font-size: 12px;
+		}
+	}
+
+	&__main-heading {
+		margin: 0;
+		font-size: 3.75em;
+		font-weight: 200;
+		text-transform: uppercase;
+		color: @main-color;
+	}
+
+	&__secondary-heading {
+		font-size: 1.5em;
+		line-height: 1.4;
+		font-weight: 200;
+		color: @main-color;
+	}
+
+	&__btn {
+		.btn-solid(@accent-color,@main-color);
+		&:hover {
+			border-color: @main-color;
+			font-weight: 800;
+		}
+		.fa {
+			padding-left: 6px;
+		}
+	}
+
+	&__nav-icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 67px;
+		height: 67px;
+		box-sizing: border-box;
+		text-align: center;
+		color: #000;
+		background-color: @main-color;
+		transition: all 0.2s ease;
+
+		&.fa {
+			font-size: 52px;
+			line-height: 67px;
+		}
+		&:hover {
+			color: @main-color;
+			background-color: #1f1e1e;
+		}
+		&:active {
+			color: @main-color;
+			background-color: @accent-color;
+		}
+	}
+
+	&__thumb {
+		display: inline-block;
+		vertical-align: middle;
+		width: 75px;
+		height: 80px;
+		@media all and (max-width: 1356px) {
+			display: none;
+		}
+	}
+	&__info {
+		display: inline-block;
+		vertical-align: middle;
+		width: 202px;
+		padding-left: 20px;
+		box-sizing: border-box;
+		font: 14px/1 normal @secondary-font;
+		text-align: left;
+		color: #999;
+		@media all and (max-width: 1079px) {
+			display: none;
+		}
+	}
+	&__info-name {
+		display: block;
+		margin-bottom: 6px;
+		font-size: 12px;
+		font-family: @main-font;
+		text-transform: uppercase;
+		color: @main-color;
+	}
+}

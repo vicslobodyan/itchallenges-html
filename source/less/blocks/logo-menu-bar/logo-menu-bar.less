@@ -1,0 +1,36 @@
+.logo-menu-bar {
+	position: relative;
+	overflow: visible;
+	.justify();
+
+	&_before-all {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		height: 22px;
+		z-index: 2;
+		.fa {
+			color: @main-color;
+		}
+	}
+	&_in-content {
+		height: 66px;
+		line-height: 66px + 20px/2;
+		.fa {
+			color: #000;
+		}
+	}	
+}
+
+.logo {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+	font-size: initial;
+
+	&__img {
+		width: 170px;
+		height: 20px;
+	}
+}
