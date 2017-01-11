@@ -23,22 +23,6 @@ gulp.task('styles', ['clean:styles'], function () {
         .pipe(gulp.dest('public/css'));
 });
 
-// gulp.task('libraries', [], function() {
-//     return gulp.src('source/js/vendor/*.js')
-//         .pipe($.plumber())
-//         .pipe($.concat('vendor.js'))
-//         .pipe($.uglify())
-//         .pipe(gulp.dest('public/js/lib'));
-// });
-
-// gulp.task('bower-files', ['libraries'], function() {
-//     return gulp.src(mainBowerFiles())
-//         .pipe($.plumber())
-//         .pipe($.concat('vendor.js'))
-//         .pipe($.uglify())
-//         .pipe(gulp.dest('public/js/lib'));
-// });
-
 gulp.task('libraries', function() {
     return $.merge(
             gulp.src(mainBowerFiles()),
